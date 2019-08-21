@@ -11,7 +11,7 @@ steps:
      - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
      - 'CLOUDSDK_CONTAINER_CLUSTER=myk8scluster'
   - name: 'gcr.io/cloud-builders/kubectl'
-    args: ['set','image','deployment','employee', 'gcr.io/$PROJECT_ID/employee:tag1']
+    args: ['set','image','deployment','employee', 'employee=gcr.io/$PROJECT_ID/employee:tag1']
     env:
      - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
      - 'CLOUDSDK_CONTAINER_CLUSTER=myk8scluster'   
