@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.employeeservicek8s.model.Employee;
 import com.example.employeeservicek8s.repository.EmployeeRepository;
 
+
 @RestController
 public class EmployeeController {
 
@@ -52,4 +53,8 @@ public class EmployeeController {
 		return repository.findByOrganizationId(organizationId);
 	}
 	
+	@GetMapping("/emp")
+	public String getStringFromEmployee() {		
+		return "GetStringFromEmployee";
+	}
 }
