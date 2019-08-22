@@ -35,7 +35,7 @@ public class EmployeeController {
 		return repository.findById(id).get();
 	}
 	
-	@GetMapping("/")
+	@GetMapping("/all")
 	public Iterable<Employee> findAll() {
 		LOGGER.info("Employee find");
 		return repository.findAll();
@@ -52,7 +52,11 @@ public class EmployeeController {
 		LOGGER.info("Employee find: organizationId={}", organizationId);
 		return repository.findByOrganizationId(organizationId);
 	}
-	
+	@GetMapping("/")
+	public String health() {
+		LOGGER.info("Employee find");
+		return "Hello Home Page EMP";
+	}
 	@GetMapping("/emp")
 	public String getStringFromEmployee() {		
 		return "GetStringFromEmployee";
