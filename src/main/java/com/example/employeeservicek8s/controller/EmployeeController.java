@@ -19,7 +19,7 @@ import com.example.employeeservicek8s.repository.EmployeeRepository;
 
 
 @RestController
-@RequestMapping(value = "/employee")
+//@RequestMapping(value = "/employee")
 public class EmployeeController {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(EmployeeController.class);
