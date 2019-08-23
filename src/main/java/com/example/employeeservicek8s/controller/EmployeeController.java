@@ -31,12 +31,6 @@ public class EmployeeController {
 		return repository.save(employee);
 	}
 	
-	@GetMapping("/{id}")
-	public String findById(@PathVariable("id") String id) {
-		LOGGER.info("Employee find: id={}", id);
-		return "Hello Root" + id;//repository.findById(id).get();
-	}
-	
 	@GetMapping("/all")
 	public Iterable<Employee> findAll() {
 		LOGGER.info("Employee find");
